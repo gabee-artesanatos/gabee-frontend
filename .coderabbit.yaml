@@ -1,0 +1,153 @@
+
+language: pt-BR
+
+reviews:
+  profile: chill
+
+  review_progress: true
+  fail_commit_status: true
+
+  auto_review:
+    enabled: true
+    drafts: false
+    auto_incremental_review: true
+
+  auto_approvals:
+    enabled: false
+
+  path_instructions:
+    - path: "**/*.{ts,tsx,js,jsx}"
+      instructions: |
+        Atue como revisor sênior de React, Next.js,
+        TypeScript e engenharia de software frontend.
+
+        Priorize bugs reais, segurança, regras de
+        negócio, integração com APIs e experiência
+        do usuário.
+
+        Classifique os problemas por gravidade:
+
+        IMPEDITIVO (Critical ou Major):
+        - Bugs demonstráveis que quebrem funcionalidades.
+        - Violações de regras de negócio confirmadas.
+        - Erros de tipagem que causem falhas reais.
+        - Atualizações incorretas de estado.
+        - Problemas de sincronização e concorrência.
+        - Falhas no tratamento de respostas de APIs.
+        - Perda de dados preenchidos pelo usuário.
+        - Vulnerabilidades como XSS e exposição de tokens.
+        - Problemas que impeçam a conclusão de fluxos.
+        - Quebras de contratos entre frontend e backend.
+
+        AVISO (Minor, Trivial ou Info):
+        - Melhorias de legibilidade e organização.
+        - Refatorações opcionais.
+        - Preferências de estilo e sintaxe.
+        - Simplificações sem alteração de comportamento.
+        - Otimizações sem impacto relevante.
+        - Melhorias arquiteturais não essenciais.
+
+        Exemplos de melhorias opcionais:
+        - Substituir for por forEach ou map quando
+          o comportamento for equivalente.
+        - Extrair componentes pequenos sem necessidade.
+        - Criar hooks para lógica utilizada uma única vez.
+        - Alterar nomes por preferência pessoal.
+        - Introduzir abstrações sem benefício demonstrado.
+
+        Analise especialmente:
+        - Gerenciamento de estado e efeitos.
+        - Dependências de useEffect.
+        - Requisições assíncronas e tratamento de erros.
+        - Validação e envio de formulários.
+        - Estados de loading, erro e sucesso.
+        - Acessibilidade de componentes interativos.
+        - Compatibilidade com diferentes telas.
+        - Diferenças entre Server e Client Components.
+        - Integridade dos dados enviados ao backend.
+
+        Para cada problema impeditivo:
+        - Explique a causa e a consequência concreta.
+        - Indique como reproduzir ou verificar.
+        - Identifique o trecho responsável.
+        - Sugira a menor alteração necessária.
+        - Não classifique hipóteses como bugs confirmados.
+
+        Para melhorias opcionais:
+        - Identifique como sugestão não bloqueante.
+        - Explique o benefício e o trade-off.
+        - Não exija refatorações cosméticas.
+
+        Evite complexidade, dependências, hooks
+        e componentes desnecessários.
+
+        Responda em português brasileiro.
+
+    - path: "**/*.{css,scss}"
+      instructions: |
+        Revise estilos CSS e SCSS.
+
+        IMPEDITIVO (Critical ou Major):
+        - Elementos essenciais inacessíveis ou ocultos.
+        - Layouts que impeçam o uso da aplicação.
+        - Sobreposição de controles interativos.
+        - Problemas graves de responsividade.
+        - Estilos que inviabilizem a leitura ou interação.
+
+        AVISO (Minor, Trivial ou Info):
+        - Melhorias visuais e de organização.
+        - Simplificação de seletores.
+        - Refatoração de estilos repetidos.
+        - Preferências estéticas sem impacto funcional.
+
+        Respeite o design system e a identidade
+        visual existente da Gabee.
+
+        Não sugira alterações estéticas subjetivas
+        como problemas impeditivos.
+
+        Responda em português brasileiro.
+
+    - path: "**/*.{json,mjs,config.ts,config.js}"
+      instructions: |
+        Revise configurações e dependências.
+
+        IMPEDITIVO (Critical ou Major):
+        - Configurações que impeçam build ou execução.
+        - Exposição de credenciais e dados sensíveis.
+        - Dependências com vulnerabilidades relevantes.
+        - Incompatibilidades comprovadas entre pacotes.
+        - Configurações inseguras de produção.
+
+        AVISO (Minor, Trivial ou Info):
+        - Atualizações opcionais de dependências.
+        - Melhorias de organização.
+        - Configurações alternativas sem ganho comprovado.
+
+        Não recomende atualizar dependências
+        apenas por existir uma versão mais recente.
+
+        Responda em português brasileiro.
+
+    - path: "**/*.{test,spec}.{ts,tsx,js,jsx}"
+      instructions: |
+        Revise testes automatizados.
+
+        IMPEDITIVO (Critical ou Major):
+        - Testes que validem comportamentos incorretos.
+        - Asserções incapazes de detectar regressões.
+        - Mocks que invalidem o cenário testado.
+        - Testes instáveis por erros de sincronização.
+        - Testes que passem mesmo com a regra quebrada.
+
+        AVISO (Minor, Trivial ou Info):
+        - Melhorias de legibilidade dos testes.
+        - Refatorações de código duplicado.
+        - Ampliação opcional de cobertura.
+        - Melhorias de nomenclatura.
+
+        Priorize testes de comportamento e regras
+        de negócio sobre detalhes de implementação.
+
+        Explique como verificar cada problema.
+        Responda em português brasileiro.
